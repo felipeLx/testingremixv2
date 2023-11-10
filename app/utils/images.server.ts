@@ -7,7 +7,7 @@ cloudinary.v2.config({
   api_secret: ENV.CLOUDINARY_SECRET,
 });
 
-async function uploadImage(data: AsyncIterable<Uint8Array>) {
+async function uploadImage(data: AsyncIterable<Uint8Array>): Promise<any> {
   const uploadPromise = new Promise(async (resolve, reject) => {
     const uploadStream = cloudinary.v2.uploader.upload_stream(
       {
