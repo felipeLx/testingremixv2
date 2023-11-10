@@ -8,6 +8,7 @@ const schema = z.object({
 	CLOUDINARY_NAME: z.string(),
 	CLOUDINARY_KEY: z.string(),
 	CLOUDINARY_SECRET: z.string(),
+	SESSION_SECRET: z.string(),
 	// DATABASE_PATH: z.string(),
 	// DATABASE_URL: z.string(),
 	// SESSION_SECRET: z.string(),
@@ -61,6 +62,7 @@ export function getEnv() {
 		CLOUDINARY_NAME: process.env.CLOUDINARY_NAME,
 		CLOUDINARY_KEY: process.env.CLOUDINARY_KEY,
 		CLOUDINARY_SECRET: process.env.CLOUDINARY_SECRET,
+		SESSION_SECRET: process.env.SESSION_SECRET,
 	}
 }
 
